@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Backbone</title>
+    <script src="underscore-min.js"></script>\
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="backbone-min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>User Manager</h1>
+        <hr />
+        <div class="page"></div>
+    </div>
+</body>
+<script>
+
+    WebsiteModel = Backbone.Model.extend({
+        defaults: {
+            name: 'cong',
+            age: 100,
+            firstname: 'hoang'
+        },
+        initialize: function () {
+        }
+    });
+
+    $(document).ready(function(){
+        var page_index = new WebsiteModel();
+        // page_index.set({name:'Nghec', age:'24'});
+        console.log(page_index.get('name')+page_index.get('firstname')+page_index.get('age'));
+    });
+
+    SandwichModel = Backbone.Model.extend({
+        defaults: {
+            bread: "wheat",
+        }
+    });
+
+</script>
+</html>
